@@ -62,7 +62,9 @@ import copy
 # print("names3", names3)
 
 
-# Дано одновимірний масив. Знайти найбільший та найменший елементи масиву та поміняти їх у масиві місцями.
+#---------------------------------------Домашня робота---------------------------------------------#
+
+# 1 Дано одновимірний масив. Знайти найбільший та найменший елементи масиву та поміняти їх у масиві місцями.
 # arr = [10, 12, 8, 18, 15, 9, 36]
 # print(arr)
 # min_value = min(arr)
@@ -72,10 +74,8 @@ import copy
 # print("Максимальне значення:", max_value)
 
 # min_index = arr.index(min_value)
-# # індекс мінімального елемента
 # print("Індекс мінімального елемента:", min_index)
 # max_index = arr.index(max_value)
-# # індекс максимального елемента
 # print("Індекс максимального елемента:", max_index)
 
 # # міняємо місцями
@@ -86,13 +86,59 @@ import copy
 # print("New Array:", arr)
 
 
-# Дано одновимірний масив. Знайти суму елементів з непарними індексами.
-arr = [10, 12, 8, 18, 15, 9, 36]
-#sum = 0
+# 2 Дано одновимірний масив. Знайти суму елементів з непарними індексами.
+# arr = [10, 12, 8, 18, 15, 9, 36]
+# sum = 0
 
-sum(arr[1::2])
-# for item in range(1, len(arr), 2): 
-#     sum += item
-#     print(arr[item])
+# for item in range(1, len(arr), 2):
+#     sum += arr[item]
+#     #print(arr[item])
+# print("Сума непарних елементів списку:", sum)
 
-print("Сума елементів:", sum(arr[1::2]))
+# 2-й спосіб
+# sum(arr[1::2])
+# print("Сума елементів:", sum(arr[1::2]))
+
+
+# 3 Дано список. Поміняти місцями перший елемент з другим, третій з четвертим, і т.д. Вивести змінений масив на екран
+# arr = [10, 12, 8, 18, 15, 9, 36]
+# print(arr)
+# for item in range(1, len(arr), 2):
+#     temp=arr[item-1]
+#     arr[item-1]=arr[item]
+#     arr[item]=temp
+
+
+# #або
+# for item in range(0, len(arr), 2):
+#     temp=arr[item]
+#     arr[item]=arr[item+1]
+#     arr[item+1]=temp
+
+# #або
+# arr[item-1], arr[item] = arr[item], arr[item-1]
+# print(arr)
+
+
+# 4 Дано список(А) із К елементів (К- парне число). Утворити 2 списки(В і С), переписуючи у списку В першу половину масиву А, у список С – другу половину масиву А
+a = ["Tom", "Bob", "Alice", "Sam", "Tim", "Bill"]
+b=[]
+c=[]
+
+for x in a[:int(len(a)/2)]:
+    b.append(x)
+
+for y in a[int(len(a)/2):]:
+    c.append(y)
+
+print('B=', b)
+print('C=', c)
+
+#2й спосiб
+# b=copy.deepcopy(a[:int(len(a)/2)])
+# c=copy.deepcopy(a[int(len(a)/2):])
+# print('B=', b)
+# print('C=', c)
+
+
+
